@@ -24,17 +24,17 @@ module.exports = router;
  *     tags: [Translation]
  *     security:
  *       - bearerAuth: []
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               text:
- *                 type: string
- *               type:
- *                 type: string
+ *     parameters:
+ *       - in: query
+ *         name: text
+ *         schema:
+ *           type: string
+ *         description: mandarin text
+ *       - in: query
+ *         name: type
+ *         schema:
+ *           type: string
+ *         description: traditional or simplified
  *     responses:
  *       "200":
  *         description: OK
