@@ -1,12 +1,19 @@
 const Joi = require('joi');
 
 const translateText = {
-  body: Joi.object().keys({
+  query: Joi.object().keys({
     text: Joi.string().required(),
     type: Joi.string().required()
   }),
 };
 
+const getRandom = {
+  query: Joi.object().keys({
+    type: Joi.string().required()
+  }),
+};
+
 module.exports = {
-    translateText
+    translateText,
+    getRandom
 }
